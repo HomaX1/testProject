@@ -1,0 +1,133 @@
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/img/background-img.jpg") fixed 50% no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 15px;
+  position: absolute;
+  top: 0;
+
+  &__wrap {
+    margin-right: 100px;
+  }
+
+  &__phone {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    color: $CANDELIGHT;
+    margin-bottom: 30px;
+  }
+  
+  &__logo {
+    width: 168px;
+    height: 64px;
+    display: block;
+    background-image: url("/img/logo.png");
+  }
+}
+
+.navigation {
+  display: flex;
+
+  &__link {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    color: $WHITE;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 30px;
+
+    &:hover {
+      .inside-menu {
+        height: auto;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
+
+.inside-menu {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  width: 165px;
+  position: absolute;
+  top: -20px;
+  left: -58px;
+  background-color: $WHITE;
+  text-align: center;
+  padding: 0 10px;
+  transition: opacity .3s ease-out;
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    border-bottom: 1px solid $CANDELIGHT;
+    padding: 20px 5px 10px;
+  }
+
+  &__link {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 0;
+    color: $BLACK;
+
+    &:last-child{
+      margin-bottom: 40px;
+    }
+
+    &:hover {
+      color: $ALUMINIUM;
+    }
+  }
+}
+
+.info {
+  text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: $WHITE;
+    margin-bottom: 45px;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    width: 210px;
+    height: 48px;
+    display: inline-block;
+    font-weight: 900;
+    font-size: 16px;
+    color: $BLACK;
+    background-color: #ffd119;
+    box-shadow: 0 11px 35px -10px rgba(255,209,25,1);
+    line-height: 48px;
+    transition: all .2s ease-out;
+
+    &:hover {
+      background-color: darken( $CANDELIGHT, 10% );
+    }
+  }
+}
+
