@@ -35,8 +35,6 @@
 }
 
 .navigation {
-  display: flex;
-
   &__link {
     text-transform: uppercase;
     font-weight: 700;
@@ -90,8 +88,10 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $LARGE-SCREEN) {
   .navigation {
+    display: flex !important;
+
     &__item {
       &:hover {
         .inside-menu {
@@ -141,10 +141,20 @@
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: $LARGE-SCREEN - 1) {
   .header {
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+
+    &__logo {
+      background-size: cover;
+      width: 121px;
+      height: 46px;
+    }
+
+    &__wrap {
+      margin: 0 0 0 30px;
+    }
 
     &__phone {
       margin-bottom: 10px;
@@ -216,10 +226,13 @@
       width: 26px;
       height: 18px;
       background: url("/img/sprite.png") 0 0 no-repeat;
-      margin-bottom: 25px;
+      margin: 0 30px 25px 0;
   }
 
   .info__title {
     font-size: 24px;
+    padding: 0 20px;
+    line-height: 35px;
+    margin-bottom: 40px;
   }
 }
