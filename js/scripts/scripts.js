@@ -23,7 +23,7 @@ $(function () {
     };
 
     let showInsideMenu = function () {
-        ALLCONST.insideMenu.hide();
+        ALLCONST.insideMenu.fadeOut();
         $(this).find('.inside-menu').fadeIn();
     };
 
